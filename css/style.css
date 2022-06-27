@@ -1,0 +1,8 @@
+body {
+    background-color: goldenrod;
+    font-family: Impact;
+}
+h1{
+    display: flex;
+    justify-content: center;
+}
