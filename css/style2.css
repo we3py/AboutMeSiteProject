@@ -1,0 +1,57 @@
+body {
+    background-color: purple;
+    font-family: Impact;
+}
+
+body, html{
+    margin: 0;
+    height: 100%;
+}
+
+.sidebar ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar{
+    top: 0;
+    display: block;
+    position: absolute;
+}
+
+.sidebar-icons{ 
+    width: 60px;
+    height: 60px;
+    border: 0px;
+    padding: 16px;
+}
+
+.images{
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+.moving-photos{   
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+    background-color: black;
+    float: left;
+    width: 475px;    
+    height: 850px;
+    object-fit: cover;
+    opacity: 1;
+    transform: scale(1);
+    transition: transform .5s ease;
+}
+.moving-photos:hover{   
+    transform: scale(1.25); 
+}
+.bottombar{  
+    position: absolute;
+    top: 849px;
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
