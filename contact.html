@@ -2,8 +2,16 @@
 <html>
     <head>
         <link rel="stylesheet" href="style.css">
+        <script type="text/javascript" src="contactscript.js"></script>
     </head>
-    <body>   
+    <body>
+        <form oninput="EnableButton()" class="container" id="sendmailform">
+            <input type="text" id="fullname" placeholder="Your name" required="required">
+            <input type="text" id="mail" placeholder="Your e-mail" required="required">
+            <textarea name="content" id="content" placeholder="Write something" required="required"></textarea>
+            <input type="button" id="sendbutton" value="Send" onclick="buttonClick()" disabled>
+
+        </form>   
         <ul class="iconsbar">
             <li><a href="index.html"><img class="icons" src="icons/home.png"></a></li>
             <li><a href="contact.html"><img class="icons" src="icons/mail.png"></a></li>
