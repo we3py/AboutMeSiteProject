@@ -1,6 +1,8 @@
 body{
     margin: 0;
     background-image: url(toolbardown.gif);  
+    font-family: monospace;
+    color: white;
     background-size: cover;
     background-position: center center;  
 }
@@ -18,9 +20,13 @@ body{
     cursor: pointer; 
 }
 
+.box-for-image a{
+    text-decoration: none;
+}
+
 .photoOne{
     display: block;
-    background-image: url(me.png);    
+    background-image: url(me.png);  
 }
 
 .photoTwo{
@@ -41,28 +47,65 @@ body{
 
 .photoOne, .photoTwo, .photoThree, .photoFour{
     height: 100%;
-    width: 100%;
+    width: 100%;  
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;   
     transition: transform .5s;
     position: absolute;
+    filter: blur(5px);
+    
+}
+
+.sign-on-photo{
+    display: flex;
+    justify-content: space-around;
+    margin: 100% 0 100% 0;
+    text-align: center;
+    font-size: 40px;
+    color: white;
+    transition: transform .5s; 
+    filter: blur(0);
 }
 
 .box-for-image:hover .photoOne{    
     transform: scale(1.2);
+    filter: blur(0);
 }
 
 .box-for-image:hover .photoTwo{    
     transform: scale(1.2);
+    filter: blur(0);
 }
 
 .box-for-image:hover .photoThree{    
     transform: scale(1.2);
+    filter: blur(0);
 }
 
 .box-for-image:hover .photoFour{    
     transform: scale(1.2);
+    filter: blur(0);
+}
+
+@keyframes move{
+    0% {margin-left: -10px; opacity: 1;}
+    25% {margin-left: 10px; opacity: 0.5}
+    50% {margin-left: -10px; opacity: 0;}
+    75% {margin-left: 10px; opacity: 0.5;}
+    100% {margin-left: -10px; opacity: 1;}
+}
+
+@keyframes zoom{
+    0% {transform: scale(0.6);}
+    25% {transform: scale(1);}
+    50% {transform: scale(0.6);}
+    75% {transform: scale(1);}
+    100% {transform: scale(0.6);}
+}
+
+.box-for-image:hover .sign-on-photo{
+    animation: zoom 2s infinite;  
 }
 
 .iconsbar{
@@ -91,5 +134,74 @@ body{
     border: 5px solid white;
     background-color: white;
     border-radius: 18px;
+}
+
+/*meserious.html*/
+header h1{
+    font-size: 50px;
+    margin-left: 50px;
+    margin-bottom: 5px;
+}
+
+header p{
+    display: inline-block;    
+    font-size: 20px;
+    margin-left: 0;
+    margin-top: 0;
+}
+
+header img{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-left: 50px;
+    vertical-align: middle;
+}
+
+.subject{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+.subject2{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.subject-name{
+    margin: 30px 0 0 50px;
+    font-size: 30px;
+}
+
+.subject-content{
+    margin-left: 50px;
+    font-size: 20px;
+}
+
+.subject-content-with-icons{
+    margin-left: 0;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row; 
+    flex: 50%;  
+    width: 60%;
+}
+
+.subject-content-with-icons p{
+    margin: 15px;
+}
+
+
+.subject-icons{
+    margin: 20px 20px 0 50px;
+    width: 50px;
+    height: 50px;
+    vertical-align: center;
+    background-color: white;
+    border-radius: 15%;
+    border: 0;
 }
 
