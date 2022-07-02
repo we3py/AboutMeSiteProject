@@ -30,10 +30,11 @@ function buttonClick(){
 
     var isMailCorrect = CheckEmail();
     var isFullnameCorrect = CheckName();
-
+    var button = document.getElementById('sendbutton');
     if(isFullnameCorrect && isMailCorrect){
         alert("Thanks for your message!");
         CleanDataInFields();
+        button.disabled = true;
     }
     else{
         alert("Correct data");
