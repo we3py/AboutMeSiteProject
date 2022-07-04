@@ -1,6 +1,6 @@
 body{
     margin: 0;
-    background-image: url(toolbardown.gif);  
+    background-image: url(../toolbardown.gif);  
     font-family: monospace;
     color: white;
     background-size: cover;
@@ -30,22 +30,22 @@ html, body {
 
 .photoOne{
     display: block;
-    background-image: url(me.png);  
+    background-image: url(../me.png);  
 }
 
 .photoTwo{
     display: block;
-    background-image: url(me2.png);
+    background-image: url(../me2.png);
 }
 
 .photoThree{
     display: block;
-    background-image: url(czapla.png);
+    background-image: url(../czapla.png);
 }
 
 .photoFour{
     display: block;
-    background-image: url(herb.png);
+    background-image: url(../herb.png);
     background-color: black;
 }
 
