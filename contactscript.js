@@ -37,7 +37,7 @@ function buttonClick(){
         button.disabled = true;
     }
     else{
-        alert("Correct data");
+        alert("Please correct data");
     }    
 }
 
